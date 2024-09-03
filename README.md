@@ -9,16 +9,21 @@ Prototype of a next-generation DataCatalog for Kedro.
 Niceties:
 - Basic dataset loading
 - Basic factory resolution
-- Lazy loading of catalog items ([#2829](https://github.com/kedro-org/kedro/issues/2829))
-- Easy custom dataset creation ([#1936](https://github.com/kedro-org/kedro/issues/1936))
-- Lean, easy to understand codebase
-- No ABCs
+- Catalog items are lazily loaded ([#2829](https://github.com/kedro-org/kedro/issues/2829))
+- Creating custom datasets is easier ([#1936](https://github.com/kedro-org/kedro/issues/1936))
+- It gets trivially represented on REPLs ([#1721](https://github.com/kedro-org/kedro/issues/1721))
+- Has public API to retrieve dataset objects ([#1778](https://github.com/kedro-org/kedro/issues/1778#issuecomment-1728079791))
+- ...which in turn have public properties ([#3929](https://github.com/kedro-org/kedro/issues/3929))
+- No ABCs are needed because there's no shared logic, only Protocols ([#4138](https://github.com/kedro-org/kedro/issues/4138))
 
-It does not support:
-- Versions (are they needed? [#4129](https://github.com/kedro-org/kedro/issues/4129),
+The codebase is lean and makes heavy use of `@dataclass` and Pydantic models. I'm no software engineer so I'm not claiming it's well designed, but hopefully it's easy to understand (and therefore criticise).
+
+Of course, it's tiny because it leaves lots of things out of the table. It critically does not support:
+
+- Versions. But, are they really needed? [#4129](https://github.com/kedro-org/kedro/issues/4129),
   [#2355](https://github.com/kedro-org/kedro/issues/2355))
-- Credentials (should we rework them completely? [#3811](https://github.com/kedro-org/kedro/issues/3811))
-- Mutability (does it send the wrong message? [#2728](https://github.com/kedro-org/kedro/issues/2728))
+- Credentials. But, shouldn't we rework them completely already? [#3811](https://github.com/kedro-org/kedro/issues/3811))
+- Mutability. But doesn't it send the wrong message? [#2728](https://github.com/kedro-org/kedro/issues/2728))
 
 ## Usage
 
