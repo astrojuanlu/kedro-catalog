@@ -24,6 +24,7 @@ Of course, it's tiny because it leaves lots of things out of the table. It criti
   [#2355](https://github.com/kedro-org/kedro/issues/2355))
 - Credentials. But, shouldn't we rework them completely already? [#3811](https://github.com/kedro-org/kedro/issues/3811))
 - Mutability. But doesn't it send the wrong message? [#2728](https://github.com/kedro-org/kedro/issues/2728))
+- Universal filepaths through fsspec. But shouldn't already move on? ([kedro-plugins#200](https://github.com/kedro-org/kedro-plugins/issues/200), [kedro-plugins#271](https://github.com/kedro-org/kedro-plugins/issues/271), [kedro-plugins#625](https://github.com/kedro-org/kedro-plugins/issues/625))
 
 ## Usage
 
